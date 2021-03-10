@@ -1,3 +1,6 @@
+
+
+
 const apiCallMapping = (action) => {
     const mapping ={
 
@@ -10,4 +13,4 @@ const apiCallMapping = (action) => {
     return mapping[action.type];
 };
 
-export default apiCallsMapping;
+export default apiCallMapping;

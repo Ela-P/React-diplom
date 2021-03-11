@@ -1,32 +1,32 @@
 import React from 'react';
-import PropTypes from "prop-types";
+// import propTypes from 'prop-types';
+
 import { 
+  withStyles,
+    Box,
     Card,
     CardActionArea,
     CardActions,
     CardContent,
-    CardMedia,
     Button,
     Typography,
-    withStyles,
 } from '@material-ui/core';
 
-import styles from './styles'
+import styles from "./styles";
 
 
-
-
-
-const RepositoryCard = () => {
+const RepositoryCard = ({name, avatar, classes}) => {
     return (
-<Card >
+    <Card >
       <CardActionArea>
-        <CardMedia
-         />
         <CardContent>
+
+        <Box className={classes.wrapperName}> 
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
           </Typography>
+        </Box>
+
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
@@ -35,9 +35,6 @@ const RepositoryCard = () => {
       </CardActionArea>
       <CardActions>
         <Button >
-          Share
-        </Button>
-        <Button >
           Learn More
         </Button>
       </CardActions>
@@ -45,4 +42,8 @@ const RepositoryCard = () => {
     );
 };
 
-export default RepositoryCard;
+// RepositoryCard.propTypes = 
+
+// ;
+
+export default withStyles(styles)(RepositoryCard);

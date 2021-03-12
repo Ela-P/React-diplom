@@ -6,7 +6,7 @@ const HomePageLayout = ({handleGoToGithub}) => {
     return (
         <div>
         <Link to={ROUTES. GITHUB_PAGE}>
-        <button> Github data page </button>
+        <button onClick={handleGoToGithub}> Github data page </button>
         </Link>
         </div>
     );

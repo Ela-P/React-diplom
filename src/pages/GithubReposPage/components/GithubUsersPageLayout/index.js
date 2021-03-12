@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import {Box, withStyles} from "@material-ui/core";
 
 import RepositoryCard from '../../../RepositoryCard';
-import styles from './styles';
+// import styles from './styles';
 
 
 const GithubReposPageLayout = ({classes, names, isLoading, errors}) => {
     return (
-        <Box className={classes.wrapper}>
-            <Box className={classes.repoArr}> 
+        <Box >
+            <Box > 
                 {names.map((repo) => (
                 <RepositoryCard repoName={repo.names}
                 description={repo.description}
@@ -28,4 +28,4 @@ GithubReposPageLayout.propTypes = {
     errors: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(GithubReposPageLayout);
+export default GithubReposPageLayout;

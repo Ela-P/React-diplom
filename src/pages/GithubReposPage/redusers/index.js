@@ -3,7 +3,7 @@ import { handleActions } from 'redux-actions';
 import * as actions from '../actions';
 
 const defaultState = {
-    names: [],
+    repositories: [],
     isLoading: false,
     errors: ''
 };
@@ -17,7 +17,7 @@ const gitPage = handleActions({
         return {
         ...state,
         isLoading: false,
-        names: payload.response
+        repositories: payload.response
         }
     },
     [actions.GET_GITHUB_REPOS_FAIL]: (state, { payload }) => ({

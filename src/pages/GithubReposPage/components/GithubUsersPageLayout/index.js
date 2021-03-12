@@ -6,15 +6,15 @@ import RepositoryCard from '../../../RepositoryCard';
 // import styles from './styles';
 
 
-const GithubReposPageLayout = ({classes, names, isLoading, errors}) => {
+const GithubReposPageLayout = ({classes, repositories, isLoading, errors}) => {
     return (
         <Box >
             <Box > 
-                {names.map((repo) => (
-                <RepositoryCard repoName={repo.names}
-                description={repo.description}
-                image={repo.owner.avatar_url} 
-                />
+                {repositories.map((repo) => (
+                  <RepositoryCard repoName={repo.names}
+                    description={repo.description}
+                    image={repo.owner.avatar_url}
+                  />
                 ))}
             </Box>
           
@@ -23,7 +23,7 @@ const GithubReposPageLayout = ({classes, names, isLoading, errors}) => {
 };
 
 GithubReposPageLayout.propTypes = {
-    names: PropTypes.arrayOf(PropTypes.object).isRequired,
+    repositories: PropTypes.arrayOf(PropTypes.object).isRequired,
     isLoading: PropTypes.bool.isRequired,
     errors: PropTypes.string.isRequired,
 };

@@ -1,10 +1,10 @@
 import 'regenerator-runtime/runtime';
 import { all } from 'redux-saga/effects';
+import apiCallsSaga from "../helpers/requests/watchRequest";
 
-import apiCallMapping from '../api/apiCallsMapping';
 
 function* rootSaga() {
-    yield all([apiCallMapping()]);
+    yield all([apiCallsSaga()]);
 }
 
 export default rootSaga;

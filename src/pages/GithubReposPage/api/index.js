@@ -1,6 +1,6 @@
 import api from '../../../api/config';
 
-export const getGitRepos = () => api.get(`/repos`);
+export const getGitRepos = () => api.get(`/repositories`);
 
 
 

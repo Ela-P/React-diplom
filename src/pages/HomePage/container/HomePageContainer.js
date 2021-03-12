@@ -6,6 +6,7 @@ const HomePageContainer = ({ history }) => {
     const handleGoToGithub = () => {
         history.push(ROUTES.GITHUB_PAGE);
     }
+
     return (
         <HomePageLayout handleGoToGithub={handleGoToGithub}/>
     );

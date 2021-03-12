@@ -1,5 +1,5 @@
-import * as gitPageActions from '../pages/GithubReposPage/actions/index';
-import * as gitPageApi from '../pages/GithubReposPage/api/index';
+import * as gitPageActions from '../pages/GithubReposPage/actions';
+import * as gitPageApi from '../pages/GithubReposPage/api';
 
 
 const apiCallMapping = (action) => {

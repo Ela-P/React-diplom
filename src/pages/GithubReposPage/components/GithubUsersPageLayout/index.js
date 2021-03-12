@@ -11,10 +11,10 @@ const GithubReposPageLayout = ({classes, names, isLoading, errors}) => {
         <Box className={classes.wrapper}>
             <Box className={classes.repoArr}> 
                 {names.map((repo) => (
-                <RepositoryCard repoName={repo.names}
-                description={repo.description}
-                image={repo.owner.avatar_url} 
-                />
+                  <RepositoryCard repoName={repo.names}
+                    description={repo.description}
+                    image={repo.owner.avatar_url}
+                  />
                 ))}
             </Box>
           

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseURL = "https://api.github.com/users/octocat/repos";
+const baseURL = "http://api.github.com";
 
 const config = {
     baseURL,

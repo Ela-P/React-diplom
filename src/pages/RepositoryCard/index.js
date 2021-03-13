@@ -12,22 +12,24 @@ import {
     CardMedia,
     Typography,
 } from '@material-ui/core';
+import {startCase} from 'lodash';
 
 import styles from "./styles";
 
 
-  const RepositoryCard = ({classes, image, repositories, description}) => {
+  const RepositoryCard = ({classes, image, repoName, description, handleClick }) => {
       return (
-      <Card className={classes.root} >
+      <Card className={classes.wrapper} >
         <CardActionArea>
-          <CardMedia className={classes.root}
+          <CardMedia className={classes.area}
             image={image}
+            onClick={handleClick}
           />
           
           <CardContent>
           <Box className={classes.wrapperName}> 
             <Typography gutterBottom variant="h5" component="h2">
-              {repositories}
+              {startCase(repoName)}
             </Typography>
           </Box>
 
@@ -37,7 +39,7 @@ import styles from "./styles";
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button >
+          <Button onClick={handleClick} >
             Learn More
           </Button>
         </CardActions>
@@ -47,9 +49,11 @@ import styles from "./styles";
 
 RepositoryCard.propTypes = {
   classes: PropTypes.oneOfType([PropTypes.object]).isRequired,
-  repositories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  repoName: PropTypes.arrayOf(PropTypes.object).isRequired,
   isLoading: PropTypes.bool.isRequired,
   image: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
+
 };
 
 export default withStyles(styles)(RepositoryCard);

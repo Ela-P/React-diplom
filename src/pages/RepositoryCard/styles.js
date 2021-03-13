@@ -1,7 +1,8 @@
 const styles = () => ({
-    wrapperName: {
+    wrapper: {
         dispay: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
 
